@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Card Details Form</title>
+    <link rel="stylesheet" href="Assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="wrapper">
+        <div class="card-wrapper">
+            <div class="card-front">
+                <div class="overlay">
+                    <div class="logo">
+                        <img src="Assets/img/card-logo.svg" alt="">
+                    </div>
+                    <div class="extra-info">
+                        <p class="cardNumber" id="cardNumber">0000 0000 0000 0000</p>
+                        <div class="lower-info">
+                            <p id="userName">John Doe</p>
+                            <p class="date" id="expDate"><span class="mm" id="mm">00</span>/<span class="yy" id="yy">00</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-back">
+                <div class="overlay">
+                    <div class="cvc-no">000</div>
+                </div>
+            </div>
+        </div>
+        <div class="user-wrapper">
+            <form class="form" id="user-form">
+                <label for="name">Cardholder Name</label>
+                <input class="name" type="text" name="name" placeholder="e.g. John Doe" id="userName-input">
+                <p class="error-f">Required Field</p>
+                <label for="cardNumber">Card Number</label>
+                <input class="cardNumber" type="text" name="cardNumber" maxlength="16" placeholder="e.g. 1234 5678 9123 0000" id="cardNumber-input">
+                <p class="error-f">Wrong Format, numbers only</p>
+                <div class="info-wrapper">
+                    <div class="mmyy-wrapper">
+                        <label for="exp">EXP.Date (MM/YY)</label>
+                        <div class="exp-wrapper">
+                            <input type="text" name="exp" placeholder="MM" id="mm-input">
+                            <input type="text" name="exp" placeholder="YY" id="yy-input">
+                            <p class="error-b">Can't be blank</p>
+                        </div>
+                    </div>
+                    <div class="cvc-wrapper">
+                        <label for="cvc">CVC</label>
+                        <input type="text" name="cvc" placeholder="e.g. 123" id="cvc">
+                        <p class="error-b">Can't be blank</p>
+                    </div>
+                </div>
+                <input type="submit" value="Confirm" class="btn" id="btn">
+            </form>
+        </div>
+    </section>
+    <script src="Assets/js/app.js"></script>
+</body>
+</html>

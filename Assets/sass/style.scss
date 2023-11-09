@@ -1,0 +1,208 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+$borderColor: hsl(270, 3%, 87%); /* Light grayish violet */
+$focusColor: hsl(278, 68%, 11%); /* Very dark violet */
+$focusColorH: hsl(278, 68%, 20%); /* Very dark violet hover */
+$btnColor: hsl(0, 0%, 100%); /* White */
+$error: hsl(0, 100%, 66%); /* Red */
+$inputBorder: hsl(278, 94%, 30%);
+
+@mixin cards {
+    width: 450px;
+    height: 250px;
+    position: absolute;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.3);
+}
+
+::placeholder {
+    color: $borderColor;
+    opacity: 1;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+
+    .card-wrapper {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        background: url(../img/bg-main-desktop.png) no-repeat center / cover;
+
+        .card-front {
+            @include cards;
+            top: 15rem;
+            right: -10rem;
+            background: url(../img/bg-card-front.png) no-repeat center / cover;
+
+            .overlay {
+                width: 100%;
+                height: inherit;
+                position: relative;
+
+                .logo {
+                    width: 100%;
+                    height: auto;
+                    position: absolute;
+                    top: 0;
+                    padding: 2rem 0rem 0rem 2rem;
+                }
+
+                .extra-info {
+                    width: 100%;
+                    color: $btnColor;
+                    padding: 0rem 2rem 2rem 2rem;
+                    
+                    position: absolute;
+                    bottom: 0;
+
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 1.8rem;
+                    letter-spacing: 2px;
+
+                    .cardNumber {
+                        margin-bottom: 1.7rem;
+                    }
+
+                    .lower-info {
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        font-size: 1rem;
+                        padding: 0rem 0rem 0rem 1rem;
+                        text-transform: uppercase;
+                    }
+
+                    
+                }
+            }
+
+        }
+
+        .card-back {
+            @include cards;
+            top: 33rem;
+            right: -15rem;
+            background: url(../img/bg-card-back.png) no-repeat center / cover;
+
+            .overlay {
+                width: 100%;
+                height: inherit;
+                position: relative;
+
+                .cvc-no {
+                    width: 100%;
+                    position: absolute;
+                    top: 7rem;
+
+                    display: flex;
+                    justify-content: flex-end;
+                    padding-right: 3rem;
+                    color: $btnColor;
+                    letter-spacing: 2px;
+                }
+            }
+
+            
+        }
+    }
+
+    .user-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .form {
+            width: 500px;
+            display: flex;
+            flex-direction: column;
+
+            input[type=text] {
+                font-size: 1.1rem;
+                padding: 8px 10px;
+                border-radius: 5px;
+                outline: none;
+                cursor: pointer;
+                border: 1px solid $borderColor;
+                margin-bottom: 20px;
+            }
+
+            .error-f {
+                font-size: 13px;
+                color: $error;
+                margin-top: -10px;
+                margin-bottom: 20px;
+            }
+
+            input[type=text]:focus {
+                border: 1px solid $inputBorder;
+            }
+
+            label {
+                text-transform: uppercase;
+                margin-bottom: 10px;
+            }
+            .info-wrapper {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 30px;
+            }
+
+            .mmyy-wrapper {
+                display: flex;
+                flex-direction: column;
+
+                input {
+                    width: 5rem;
+                    margin-right: 10px;
+                }
+
+                .error-b {
+                    font-size: 13px;
+                    color: $error;
+                }
+            }
+            .cvc-wrapper {
+                display: flex;
+                flex-direction: column;
+
+                .error-b {
+                    font-size: 13px;
+                    color: $error;
+                }
+            }
+
+            .btn {
+                font-size: 1rem;
+                padding: 1rem 2rem;
+                background-color: $focusColor;
+                color: $btnColor;
+                outline: none;
+                border: none;
+                cursor: pointer;
+                border-radius: 5px;
+            }
+
+            .btn:hover {
+                background-color: $focusColorH;
+            }
+
+        }
+        
+    }
+}
+

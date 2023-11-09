@@ -1,0 +1,174 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+/* Light grayish violet */
+/* Very dark violet */
+/* Very dark violet hover */
+/* White */
+/* Red */
+::placeholder {
+  color: hsl(270, 3%, 87%);
+  opacity: 1;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 2.5fr;
+}
+.wrapper .card-wrapper {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: url(../img/bg-main-desktop.png) no-repeat center/cover;
+}
+.wrapper .card-wrapper .card-front {
+  width: 450px;
+  height: 250px;
+  position: absolute;
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  top: 15rem;
+  right: -10rem;
+  background: url(../img/bg-card-front.png) no-repeat center/cover;
+}
+.wrapper .card-wrapper .card-front .overlay {
+  width: 100%;
+  height: inherit;
+  position: relative;
+}
+.wrapper .card-wrapper .card-front .overlay .logo {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  padding: 2rem 0rem 0rem 2rem;
+}
+.wrapper .card-wrapper .card-front .overlay .extra-info {
+  width: 100%;
+  color: hsl(0, 0%, 100%);
+  padding: 0rem 2rem 2rem 2rem;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+}
+.wrapper .card-wrapper .card-front .overlay .extra-info .cardNumber {
+  margin-bottom: 1.7rem;
+}
+.wrapper .card-wrapper .card-front .overlay .extra-info .lower-info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  padding: 0rem 0rem 0rem 1rem;
+  text-transform: uppercase;
+}
+.wrapper .card-wrapper .card-back {
+  width: 450px;
+  height: 250px;
+  position: absolute;
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  top: 33rem;
+  right: -15rem;
+  background: url(../img/bg-card-back.png) no-repeat center/cover;
+}
+.wrapper .card-wrapper .card-back .overlay {
+  width: 100%;
+  height: inherit;
+  position: relative;
+}
+.wrapper .card-wrapper .card-back .overlay .cvc-no {
+  width: 100%;
+  position: absolute;
+  top: 7rem;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 3rem;
+  color: hsl(0, 0%, 100%);
+  letter-spacing: 2px;
+}
+.wrapper .user-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper .user-wrapper .form {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+.wrapper .user-wrapper .form input[type=text] {
+  font-size: 1.1rem;
+  padding: 8px 10px;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid hsl(270, 3%, 87%);
+  margin-bottom: 20px;
+}
+.wrapper .user-wrapper .form .error-f {
+  font-size: 13px;
+  color: hsl(0, 100%, 66%);
+  margin-top: -10px;
+  margin-bottom: 20px;
+}
+.wrapper .user-wrapper .form input[type=text]:focus {
+  border: 1px solid hsl(278, 94%, 30%);
+}
+.wrapper .user-wrapper .form label {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.wrapper .user-wrapper .form .info-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.wrapper .user-wrapper .form .mmyy-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.wrapper .user-wrapper .form .mmyy-wrapper input {
+  width: 5rem;
+  margin-right: 10px;
+}
+.wrapper .user-wrapper .form .mmyy-wrapper .error-b {
+  font-size: 13px;
+  color: hsl(0, 100%, 66%);
+}
+.wrapper .user-wrapper .form .cvc-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.wrapper .user-wrapper .form .cvc-wrapper .error-b {
+  font-size: 13px;
+  color: hsl(0, 100%, 66%);
+}
+.wrapper .user-wrapper .form .btn {
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  background-color: hsl(278, 68%, 11%);
+  color: hsl(0, 0%, 100%);
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.wrapper .user-wrapper .form .btn:hover {
+  background-color: hsl(278, 68%, 20%);
+}
+
+/*# sourceMappingURL=style.css.map */
