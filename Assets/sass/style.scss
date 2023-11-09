@@ -29,7 +29,7 @@ $inputBorder: hsl(278, 94%, 30%);
 
 .wrapper {
     width: 100%;
-    height: 100vh;
+    height: auto;
 
     display: grid;
     grid-template-columns: 1fr 2.5fr;
@@ -206,3 +206,131 @@ $inputBorder: hsl(278, 94%, 30%);
     }
 }
 
+@mixin mobileCards {
+    width: 270px;
+    height: 150px;
+    position: absolute;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.3);
+}
+
+@media only screen and (max-width: 810px) {
+    .wrapper {
+        width: 100%;
+        height: 100vh;
+        grid-template-columns: none;
+        grid-template-rows: 1fr 2fr;
+
+        .card-wrapper {
+            width: 100%;
+            height: 15rem;
+            margin-bottom: 4rem;
+
+            .card-front {
+                @include mobileCards;
+                top: 8rem;
+                left: 1rem;
+                z-index: 1;
+
+                .overlay {
+                    width: 100%;
+
+                    .logo {
+                        padding: 1.5rem 0rem 0rem 2rem;
+
+                        img {
+                            width: 45px;
+                            height: 26px;
+                        }
+                    }
+
+                    .extra-info {
+                        font-size: 0.9rem;
+                        padding: 0rem 1rem 1rem 1rem;
+                        // background-color: red;
+
+                        .cardNumber {
+                            width: 100%;
+                            display: flex;
+                            justify-content: center;
+                            margin-bottom: 15px;
+                        }
+
+                        .lower-info {
+                                width: 100%;
+                                display: flex;
+                                justify-content: space-between;
+                                font-size: 0.6rem;
+                                padding: none;
+                                text-transform: uppercase;
+                            
+                        }
+
+                    }
+                }
+            }
+
+            .card-back {
+                @include mobileCards;
+                top: 3rem;
+                right: 1rem;
+
+                .overlay {
+                    width: 100%;
+
+                    .cvc-no {
+                            width: 100%;
+                            position: absolute;
+                            top: 4rem;
+        
+                            display: flex;
+                            font-size: .8rem;
+                            justify-content: flex-end;
+                            padding-right: 2rem;
+                            color: $btnColor;
+                            letter-spacing: 2px;
+                    }
+                }
+            }
+        }
+
+        .user-wrapper {
+            .form {
+                width: 90%;
+
+                .info-wrapper {
+                    .mmyy-wrapper {
+                        .exp-wrapper {
+                            display: flex;
+                            
+                        }
+                    }
+
+                    .cvc-wrapper {
+                        input {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* For 1366 Resolution */  
+@media only screen and (min-width: 1030px) and (max-width: 1466px)  
+{ 
+    .wrapper {
+        .card-wrapper {
+            .card-front {
+                top: 8rem;
+                left: 2rem;
+            }
+
+            .card-back {
+                top: 25rem;
+                left: 5rem;
+            }
+        }
+    }
+}
