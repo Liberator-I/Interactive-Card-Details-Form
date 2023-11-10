@@ -119,7 +119,7 @@
   border: 1px solid hsl(270, 3%, 87%);
   margin-bottom: 20px;
 }
-.wrapper .user-wrapper .form .error-f {
+.wrapper .user-wrapper .form .error-f, .wrapper .user-wrapper .form .error-r {
   font-size: 13px;
   color: hsl(0, 100%, 66%);
   margin-top: -10px;
