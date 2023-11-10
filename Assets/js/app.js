@@ -7,7 +7,6 @@ const no = document.querySelectorAll('.no');
 let noArray = Array.from(no);
 const submit = document.querySelector('.btn'); // Submit button
 
-const cardNumber = document.querySelector('#cardNumber-input'); // Card Number input
 
 // Inputs & Displays
 const userInput = document.querySelector('#userName-input');
@@ -22,6 +21,18 @@ const mmDisplay = document.querySelector('#mm');
 const yyDisplay = document.querySelector('#yy');
 const ccvDisplay = document.querySelector('#ccv');
 
+// Wrapper
+const wrapper = document.querySelector('.user-wrapper');
+
+// Resets
+userInput.value = '';
+cardInput.value = '';
+mmInput.value = '';
+yyInput.value = '';
+ccvInput.value = '';
+
+// src
+const img = 'Assets/img/icon-complete.svg';
 
 // Errors
 const required = 'Please enter required fields';
@@ -58,15 +69,15 @@ let formatInput = () => {
 }
 
 let checkFormat = () => {
-    let value = cardNumber.value;
+    let value = cardInput.value;
     let noSpace = value.replace(/\s/g, "");
 
     if(!/^\d+$/.test(noSpace)) {
-        cardNumber.style.borderColor = errorColor;
+        cardInput.style.borderColor = errorColor;
         errorF.innerText = format;
         isValid = false;
     } else {
-        cardNumber.style.borderColor = '';
+        cardInput.style.borderColor = '';
         errorF.innerText = '';
         checkLastFields();
     }
@@ -86,7 +97,7 @@ let checkLastFields = () => {
 
 
 // Splitting numbers into a group of 4 in input as user types
-cardNumber.addEventListener("input", () => cardNumber.value = formatNumber(cardNumber.value.replaceAll(" ", "")));
+cardInput.addEventListener("input", () => cardInput.value = formatNumber(cardInput.value.replaceAll(" ", "")));
 
 const formatNumber = (number) => number.split("").reduce((seed, next, index) => {
   if (index !== 0 && !(index % 4)) seed += " ";
@@ -105,6 +116,15 @@ let validateForm = (e) => {
         mmDisplay.innerText = mmInput.value;
         yyDisplay.innerText = yyInput.value;
         ccvDisplay.innerText = ccvInput.value;
+
+        return wrapper.innerHTML = `
+                <div class='complete-wrapper'>
+                    <img src='${img}'>
+                    <h1>Thank you!</h1>
+                    <p>We've added your card details!</p>
+                    <input type="submit" value="Continue" class="btn-complete" id="btn">
+                </div>
+        `;
 
     } else {
         // do nothing

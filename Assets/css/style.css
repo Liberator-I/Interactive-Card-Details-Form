@@ -170,6 +170,42 @@
 .wrapper .user-wrapper .form .btn:hover {
   background-color: hsl(278, 68%, 20%);
 }
+.wrapper .user-wrapper .complete-wrapper {
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.wrapper .user-wrapper .complete-wrapper h1 {
+  font-size: 2rem;
+  font-family: "Space Grotesk", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: hsl(278, 68%, 11%);
+  margin-bottom: 10px;
+}
+.wrapper .user-wrapper .complete-wrapper p {
+  color: gray;
+  font-size: 1.2rem;
+  margin-bottom: 50px;
+}
+.wrapper .user-wrapper .complete-wrapper .btn-complete {
+  width: 300px;
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  background-color: hsl(278, 68%, 11%);
+  color: hsl(0, 0%, 100%);
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.wrapper .user-wrapper .complete-wrapper img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 40px;
+}
 
 @media only screen and (max-width: 810px) {
   .wrapper {
@@ -252,6 +288,9 @@
   }
   .wrapper .user-wrapper .form .info-wrapper .cvc-wrapper input {
     width: 100%;
+  }
+  .wrapper .user-wrapper .complete-wrapper {
+    width: 90%;
   }
 }
 /* For 1366 Resolution */

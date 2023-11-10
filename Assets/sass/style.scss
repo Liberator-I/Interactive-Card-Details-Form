@@ -202,6 +202,47 @@ $inputBorder: hsl(278, 94%, 30%);
             }
 
         }
+
+        .complete-wrapper {
+            width: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            h1 {
+                font-size: 2rem;
+                font-family: 'Space Grotesk', sans-serif;
+                text-transform: uppercase;
+                letter-spacing: 4px;
+                color: $focusColor;
+                margin-bottom: 10px;
+            }
+
+            p {
+                color: gray;
+                font-size: 1.2rem;
+                margin-bottom: 50px;
+            }
+
+            .btn-complete {
+                width: 300px;
+                font-size: 1rem;
+                padding: 1rem 2rem;
+                background-color: $focusColor;
+                color: $btnColor;
+                outline: none;
+                border: none;
+                cursor: pointer;
+                border-radius: 5px;
+            }
+
+            img {
+                width: 80px;
+                height: 80px;
+                margin-bottom: 40px;
+            }
+        }
         
     }
 }
@@ -247,7 +288,6 @@ $inputBorder: hsl(278, 94%, 30%);
                     .extra-info {
                         font-size: 0.9rem;
                         padding: 0rem 1rem 1rem 1rem;
-                        // background-color: red;
 
                         .cardNumber {
                             width: 100%;
@@ -312,6 +352,9 @@ $inputBorder: hsl(278, 94%, 30%);
                         }
                     }
                 }
+            }
+            .complete-wrapper {
+                width: 90%;
             }
         }
     }
