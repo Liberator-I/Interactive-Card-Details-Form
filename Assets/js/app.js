@@ -9,13 +9,25 @@ const submit = document.querySelector('.btn'); // Submit button
 
 const cardNumber = document.querySelector('#cardNumber-input'); // Card Number input
 
+// Inputs & Displays
+const userInput = document.querySelector('#userName-input');
+const cardInput = document.querySelector('#cardNumber-input');
+const mmInput = document.querySelector('#mm-input');
+const yyInput = document.querySelector('#yy-input');
+const ccvInput = document.querySelector('#ccv-input');
+
+const userDisplay = document.querySelector('#userName');
+const cardDisplay = document.querySelector('#cardNumber'); 
+const mmDisplay = document.querySelector('#mm');
+const yyDisplay = document.querySelector('#yy');
+const ccvDisplay = document.querySelector('#ccv');
+
 
 // Errors
 const required = 'Please enter required fields';
 const format = 'Wrong Format, numbers only';
 const length = 'Please check card number';
 let isValid = true;
-let isNumber = false;
 
 // Error Color
 const errorColor = '#ff5252';
@@ -88,7 +100,12 @@ let validateForm = (e) => {
     e.preventDefault();
     checkFields();
     if(isValid == true) {
-        console.log('All validation check')
+        userDisplay.innerText = userInput.value;
+        cardDisplay.innerText = cardInput.value;
+        mmDisplay.innerText = mmInput.value;
+        yyDisplay.innerText = yyInput.value;
+        ccvDisplay.innerText = ccvInput.value;
+
     } else {
         // do nothing
         return;
