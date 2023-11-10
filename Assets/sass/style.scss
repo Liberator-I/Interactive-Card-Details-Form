@@ -360,20 +360,20 @@ $inputBorder: hsl(278, 94%, 30%);
     }
 }
 
-/* For 1366 Resolution */  
-@media only screen and (min-width: 1030px) and (max-width: 1466px)  
-{ 
-    .wrapper {
-        .card-wrapper {
-            .card-front {
-                top: 8rem;
-                left: 2rem;
-            }
+// /* For 1366 Resolution */  
+// @media only screen and (min-width: 1030px) and (max-width: 1466px)  
+// { 
+//     .wrapper {
+//         .card-wrapper {
+//             .card-front {
+//                 top: 8rem;
+//                 left: 2rem;
+//             }
 
-            .card-back {
-                top: 25rem;
-                left: 5rem;
-            }
-        }
-    }
-}
+//             .card-back {
+//                 top: 25rem;
+//                 left: 5rem;
+//             }
+//         }
+//     }
+// }
