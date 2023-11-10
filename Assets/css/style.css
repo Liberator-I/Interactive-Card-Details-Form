@@ -106,7 +106,6 @@
   align-items: center;
 }
 .wrapper .user-wrapper .form {
-  width: 500px;
   display: flex;
   flex-direction: column;
 }
